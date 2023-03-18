@@ -19,9 +19,7 @@ class Person(models.Model):
 
 class Provider(models.Model):
     provider = models.CharField(max_length=50)
-    city = models.ForeignKey(
+    city = models.OneToOneField(
         City,
         on_delete=models.CASCADE,
-        primary_key=True
     )
-
